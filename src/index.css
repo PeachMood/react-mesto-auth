@@ -1,0 +1,98 @@
+/*Обнуление браузерных стилей*/
+@import url(./vendor/normalize.css);
+
+/*Шрифты*/
+@import url(./vendor/fonts/fonts.css);
+
+/*Обнуление стилей для кнопок*/
+@import url(./blocks/button/button.css);
+
+/*Стили для блока page*/
+@import url(./blocks/page/page.css);
+
+/*Стили для блока content*/
+@import url(./blocks/content/content.css);
+
+/*Стили для блока header*/
+@import url(./blocks/header/header.css);
+@import url(./blocks/header/__logo/header__logo.css);
+@import url(./blocks/header/__nav/header__nav.css);
+@import url(./blocks/header/__link/header__link.css);
+@import url(./blocks/header/__email/header__email.css);
+@import url(./blocks/header/__button/header__button.css);
+
+/*Стили для блока profile*/
+@import url(./blocks/profile/profile.css);
+@import url(./blocks/profile/__container/profile__container.css);
+@import url(./blocks/profile/__avatar/profile__avatar.css);
+@import url(./blocks/profile/__info/profile__info.css);
+@import url(./blocks/profile/__name-wrapper/profile__name-wrapper.css);
+@import url(./blocks/profile/__name/profile__name.css);
+@import url(./blocks/profile/__edit/profile__edit.css);
+@import url(./blocks/profile/__about/profile__about.css);
+@import url(./blocks/profile/__add/profile__add.css);
+
+/*Стили для блока cards*/
+@import url(./blocks/cards/cards.css);
+@import url(./blocks/cards/__container/cards__container.css);
+
+/*Стили для блока card*/
+@import url(./blocks/card/card.css);
+@import url(./blocks/card/__delete/card__delete.css);
+@import url(./blocks/card/__delete/_hidden/card__delete_hidden.css);
+@import url(./blocks/card/__square/card__square.css);
+@import url(./blocks/card/__image/card__image.css);
+@import url(./blocks/card/__caption/card__caption.css);
+@import url(./blocks/card/__text/card__text.css);
+@import url(./blocks/card/__wrapper/card__wrapper.css);
+@import url(./blocks/card/__like/card__like.css);
+@import url(./blocks/card/__like/_active/card__like_active.css);
+@import url(./blocks/card/__counter/card__counter.css);
+
+/*Стили для блока footer*/
+@import url(./blocks/footer/footer.css);
+@import url(./blocks/footer/__copyright/footer__copyright.css);
+
+/*Стили для блока popup*/
+@import url(./blocks/popup/popup.css);
+@import url(./blocks/popup/_opened/popup_opened.css);
+@import url(./blocks/popup/_background/popup_background_light.css);
+@import url(./blocks/popup/_background/popup_background_dark.css);
+@import url(./blocks/popup/__container/popup__container.css);
+@import url(./blocks/popup/__close/popup__close.css);
+
+/*Стили для блока form*/
+@import url(./blocks/form/form.css);
+@import url(./blocks/form/_theme/form_theme_dark.css);
+@import url(./blocks/form/_theme/form_theme_light.css);
+@import url(./blocks/form/__title/form__title.css);
+@import url(./blocks/form/__title/_theme/form__title_theme_dark.css);
+@import url(./blocks/form/__title/_theme/form__title_theme_light.css);
+@import url(./blocks/form/__title/_position/form__title_position_centered.css);
+@import url(./blocks/form/__field/form__field.css);
+@import url(./blocks/form/__input/form__input.css);
+@import url(./blocks/form/__input/_theme/form__input_theme_dark.css);
+@import url(./blocks/form/__input/_theme/form__input_theme_light.css);
+@import url(./blocks/form/__submit/form__submit.css);
+@import url(./blocks/form/__submit/_theme/form__submit_theme_dark.css);
+@import url(./blocks/form/__submit/_theme/form__submit_theme_light.css);
+
+/*Стили для блока figure*/
+@import url(./blocks/figure/figure.css);
+@import url(./blocks/figure/__image/figure__image.css);
+@import url(./blocks/figure/__image/_size/figure__image_size_large.css);
+@import url(./blocks/figure/__caption/figure__caption.css);
+@import url(./blocks/figure/__text/figure__text.css);
+
+/*Стили для блока tooltip*/
+@import url(./blocks/tooltip/tooltip.css);
+@import url(./blocks/tooltip/__icon/tooltip__icon.css);
+@import url(./blocks/tooltip/__icon/_status/tooltip__icon_status_error.css);
+@import url(./blocks/tooltip/__icon/_status/tooltip__icon_status_succes.css);
+@import url(./blocks/tooltip/__message/tooltip__message.css);
+/*Стили для блока auth*/
+@import url(./blocks/auth/auth.css);
+@import url(./blocks/auth/__form/auth__form.css);
+@import url(./blocks/auth/__button/auth__button.css);
+@import url(./blocks/auth/__signup/auth__signup.css);
+@import url(./blocks/auth/__link/auth__link.css);

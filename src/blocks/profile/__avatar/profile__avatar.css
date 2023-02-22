@@ -1,0 +1,26 @@
+.profile__avatar {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+}
+
+.profile__avatar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .8) url(../../../images/profilePencilIcon.svg) no-repeat center / 26px;
+  opacity: 0;
+  transition: opacity ease .5s;
+}
+
+.profile__avatar:hover::after {
+  cursor: pointer;
+  opacity: 1;
+}

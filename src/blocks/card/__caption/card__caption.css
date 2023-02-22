@@ -1,0 +1,8 @@
+.card__caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  gap: 21px;
+  padding: 22px 20px;
+}

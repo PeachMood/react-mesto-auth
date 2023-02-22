@@ -1,0 +1,9 @@
+.card__square {
+  position: relative;
+}
+
+.card__square::before {
+  display: block;
+  content: "";
+  padding-top: 100%;
+}

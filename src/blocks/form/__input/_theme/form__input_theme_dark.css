@@ -1,0 +1,15 @@
+.form__input_theme_dark {
+  background-color: #000;
+  color: #fff;
+  font-weight: 500;
+  border-bottom: 2px solid #ccc;
+}
+
+.form__input_theme_dark::placeholder {
+  color: #ccc;
+  font-weight: 400;
+}
+
+.form__input_theme_dark:focus {
+  border-bottom: 2px solid #fff;
+}

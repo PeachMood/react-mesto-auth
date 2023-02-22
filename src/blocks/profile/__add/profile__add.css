@@ -1,0 +1,22 @@
+.profile__add {
+  flex-shrink: 0;
+  background: url(../../../images/profilePlusIcon.svg) center no-repeat;
+  background-size: 22px;
+  border: 2px solid #fff;
+  outline: none;
+  width: 150px;
+  height: 50px;
+  padding: 0;
+  transition: opacity linear .3s;
+}
+
+.profile__add:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width: 720px) {
+  .profile__add {
+    background-size: 16px;
+    width: 282px;
+  }
+}

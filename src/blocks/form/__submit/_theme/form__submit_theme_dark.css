@@ -1,0 +1,9 @@
+.form__submit_theme_dark {
+  background-color: #fff;
+  color: #000;
+  transition: opacity linear .3s;
+}
+
+.form__submit_theme_dark:hover {
+  opacity: .85;
+}

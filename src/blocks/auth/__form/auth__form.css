@@ -1,0 +1,19 @@
+.auth__form {
+  width: 358px;
+  margin-top: 60px;
+  padding: 0;
+}
+
+@media screen and (max-width: 720px) {
+  .auth__form {
+    width: 327px;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .auth__form {
+    width: 260px;
+    margin-top: 40px;
+  }
+}

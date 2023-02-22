@@ -1,0 +1,20 @@
+.form {
+  border-radius: 10px;
+  width: 430px;
+  box-sizing: border-box;
+  padding: 34px 36px 37px;
+}
+
+@media screen and (max-width: 720px) {
+  .form {
+    width: 356px;
+    padding: 30px 29px 31px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form {
+    width: 282px;
+    padding: 25px 22px;
+  }
+}

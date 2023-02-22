@@ -1,0 +1,26 @@
+.content {
+  box-sizing: border-box;
+  max-width: 1280px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 45px 200px 60px;
+}
+
+@media screen and (max-width: 1080px) {
+  .content {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .content {
+    padding: 35px 60px 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content {
+    padding: 28px 0 36px;
+  }
+}

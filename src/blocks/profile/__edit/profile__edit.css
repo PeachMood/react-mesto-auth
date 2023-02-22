@@ -1,0 +1,22 @@
+.profile__edit {
+  flex-shrink: 0;
+  background: url(../../../images/profilePencilIcon.svg) center / 10px no-repeat;
+  border: 1px solid #fff;
+  outline: none;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  transition: opacity linear .3s;
+}
+
+.profile__edit:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width: 480px) {
+  .profile__edit {
+    background-size: 7.5px;
+    width: 18px;
+    height: 18px;
+  }
+}
