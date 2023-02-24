@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-import { useTooltipContext } from '../contexts/tooltip';
-import { auth } from '../utils/auth';
-
-export const Register = () => {
+export const Register = ({ onRegister }) => {
   const [data, setData] = useState({ email: '', password: '' });
-  const { openTooltip } = useTooltipContext();
-  const navigate = useNavigate();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -16,18 +11,7 @@ export const Register = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    auth.register(data)
-      .then(_ => {
-        openTooltip({ isError: false, message: 'Вы успешно зарегистрировались!' });
-        navigate('/sign-in', { replace: true });
-      })
-      .catch(error => {
-        const tooltip = { isError: true, message: 'Что-то пошло не так! Попробуйте ещё раз.' };
-        if (error === 400) {
-          tooltip.message = 'Некорректный логин или пароль.';
-        }
-        openTooltip(tooltip);
-      });
+    onRegister(data);
   };
 
   return (

@@ -1,19 +1,11 @@
-import React from 'react';
-import { Routes, Link, Route, useNavigate } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Routes, Link, Route } from 'react-router-dom';
 
 import headerLogo from '../images/headerLogo.svg';
-import { useCurrentUserContext } from '../contexts/user';
+import { CurrentUserContext } from '../contexts/CurrentUserContext';
 
-export const Header = () => {
-  const { currentUser, setCurrentUser, setIsLoggedIn } = useCurrentUserContext();
-  const navigate = useNavigate();
-
-  const handleSignOut = () => {
-    localStorage.removeItem('token');
-    setIsLoggedIn(false);
-    setCurrentUser(null);
-    navigate('/sign-in', { replace: true });
-  };
+export const Header = ({ onSignOut }) => {
+  const currentUser = useContext(CurrentUserContext);
 
   return (
     <header className="header">
@@ -25,12 +17,11 @@ export const Header = () => {
           <Route path="/" element={
             <>
               <p className="header__email">{currentUser?.email}</p>
-              <button className="header__button button" onClick={handleSignOut}>Выйти</button>
+              <button className="header__button button" onClick={onSignOut}>Выйти</button>
             </>
           } />
         </Routes>
       </nav>
-
     </header>
   );
 };

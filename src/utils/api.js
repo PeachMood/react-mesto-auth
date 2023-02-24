@@ -1,7 +1,7 @@
 import { HttpApi } from './HttpApi';
 
-// Класс, предоставляющий методы для получения данных с сервера для страницы Home
-class HomeApi extends HttpApi {
+// Класс, предоставляющий методы для получения данных с сервера о профиле пользователя
+class Api extends HttpApi {
   constructor(options) {
     super(options.baseUrl);
     this._headers = options.headers;
@@ -59,7 +59,7 @@ class HomeApi extends HttpApi {
 }
 
 // Название модуля было выбрано для соответствия требованиям
-export const api = new HomeApi({
+export const api = new Api({
   baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-56',
   headers: {
     authorization: '1ef1b3d5-edaa-4946-a8b9-3e3aa212cdf2',

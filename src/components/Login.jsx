@@ -1,15 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
-import { useCurrentUserContext } from '../contexts/user';
-import { useTooltipContext } from '../contexts/tooltip';
-import { auth } from '../utils/auth';
-
-export const Login = () => {
+export const Login = ({ onLogin }) => {
   const [data, setData] = useState({ email: '', password: '', });
-  const { setIsLoggedIn, setCurrentUser } = useCurrentUserContext();
-  const { openTooltip } = useTooltipContext();
-  const navigate = useNavigate();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -18,28 +10,7 @@ export const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    auth.login(data)
-      .then(response => {
-        if (response.token) {
-          setIsLoggedIn(true);
-          setCurrentUser({ email: data.email });
-          navigate('/', { replace: true });
-        }
-      })
-      .catch(error => {
-        const tooltip = { isError: true };
-        switch (error) {
-          case 400:
-            tooltip.message = 'Неверный логин или пароль.';
-            break;
-          case 401:
-            tooltip.message = 'Пользователь с данным email не найден.';
-            break;
-          default:
-            tooltip.message = 'Что-то пошло не так! Попробуйте ещё раз.';
-        }
-        openTooltip(tooltip);
-      });
+    onLogin(data);
   };
 
   return (
